@@ -1,7 +1,7 @@
 language: ruby
 rvm:
 - 1.9.3
-script: bundle exec jekyll build --baseurl ''
+script: bundle exec jekyll build --config _config.yml,_config_s3.yml
 install: bundle install
 after_success: bundle exec s3_website push --headless
 branches:
